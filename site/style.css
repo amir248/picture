@@ -4,4 +4,23 @@
 body{
   background: linear-gradient(rgba(255,255,0,0.3),rgba(0,255,255,0.3));
   min-height: 100vh;
+  width:100%;
+}
+main{
+  /* display:block; */
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+  max-width: 900px;
+
+}
+img{
+  max-width:900px;
+  width:100%;
+}
+h1{
+  color:white;
+  text-shadow: 1px 1px black;
+  width:100%;
+  background:green;
 }
