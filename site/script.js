@@ -145,7 +145,7 @@ width:100%;
 flex-wrap:wrap;
 justify-content:center;
 align-items:center;
-// flex-direction:column;
+flex-direction:column;
 `
 console.log(images.length);
 function photoStock(){
