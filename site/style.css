@@ -82,3 +82,12 @@ h1{
   top: 3px;
   background-color: #fff;
 }
+#git a:visited{
+  color:violet;
+}
+#git a:link{
+  color:yellow;
+}
+#git a:hover{
+  color:green;
+}

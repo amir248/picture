@@ -166,3 +166,9 @@ function photoStock(){
   }
 }
 photoStock();
+
+let github=document.createElement('a');
+github.innerHTML='<a href="https://github.com/amir248/picture/blob/main/site/script.js">github</a>';
+github.style.cssText='margin:3%;font-size:50px;text-shadow:1px 1px black;';
+github.setAttribute('id','git');
+document.querySelector('main').append(github);
