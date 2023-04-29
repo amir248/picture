@@ -162,6 +162,7 @@ function photoStock(){
     document.querySelectorAll('#ph')[i].addEventListener('click',()=>{
       document.querySelector('img').setAttribute('src',`${images[i]}`);
       window.location.href='#';
+      count=i;
     });
   }
 }
