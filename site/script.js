@@ -65,7 +65,6 @@ document.querySelector('input[type=checkbox]').addEventListener('click',()=>{
     text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
     eng.innerHTML='< - Eng';
   }
-  console.log('click');
 });
 
 let eng=document.createElement('span');
