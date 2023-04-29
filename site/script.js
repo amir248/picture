@@ -6,7 +6,9 @@ let picture=document.createElement('picture');
 document.querySelector('main').append(picture);
 let img=document.createElement('img');
 document.querySelector('picture').append(img);
+document.querySelector('img').setAttribute('src','#');
 document.querySelector('img').setAttribute('alt','Галерая на яваскрипт');
+
 
 window.addEventListener('DOMContentLoaded',()=>{
   document.querySelector('img').setAttribute('src',randomImage());
@@ -33,3 +35,39 @@ let span=document.createElement('span');
 span.innerHTML=`click flipping <img src='site/click-flipping.png' alt='галерея на яваскритп с перелистванием по клику' style='width:35px'>`;
 span.className='lol';
 document.querySelector('main').append(span);
+
+let text=document.createElement('p');
+text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
+document.querySelector('main').append(text);
+document.querySelector('p').style.cssText=`
+  margin:1%;
+`;
+
+
+let label=document.createElement('label');
+label.className="toggler-wrapper style-1";
+document.querySelector('main').append(label);
+let input=document.createElement('input');
+input.setAttribute('type','checkbox');
+document.querySelector('label').append(input);
+let div=document.createElement('div');
+div.className='toggler-slider';
+document.querySelector('label').append(div);
+let divTwo=document.createElement('div');
+divTwo.className='toggler-knob';
+document.querySelector('.toggler-slider').append(divTwo);
+
+document.querySelector('input[type=checkbox]').addEventListener('click',()=>{
+  if(document.querySelector('input[type=checkbox]').checked==true){
+    text.innerHTML='Super brilliant photo gallery with flipping by clicking on the photo. Tattoo gallery can be embedded into any site and it will work wherever you can change page styles and embed JS("Java Script" ^_^)';
+    eng.innerHTML='< - Rus';
+  }else{
+    text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
+    eng.innerHTML='< - Eng';
+  }
+  console.log('click');
+});
+
+let eng=document.createElement('span');
+eng.innerHTML='< - Eng';
+document.querySelector('main').append(eng);
