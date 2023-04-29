@@ -62,25 +62,42 @@ document.querySelector('.toggler-slider').append(divTwo);
 //фотоКлик созданный после объявления класса лол
 document.querySelector('.lol').addEventListener('click',photoClick);
 
+function russian(){
+  text.innerHTML='Super brilliant photo gallery with flipping by clicking on the photo. Tattoo gallery can be embedded into any site and it will work wherever you can change page styles and embed JS("Java Script" ^_^)';
+  eng.innerHTML='< - Russian';
+  styleCheckbox.innerHTML='Checkbox styles were taken from here <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
+  eng.style.cssText=`border:3px solid green;width:100%;background:rgba(0,255,0,0.3);border-radius:7px;color:grey;text-shadow:black 1px 1px;`
+  Ahref.innerHTML='The page was developed with the participation of a super awesome web workshop: <a href="https://nasobe.ru/">Web workshop named after Baron Siteverstauzen.</a> Be sure to check it out! ^_^';
+  //SEO
+  document.querySelector('head > meta:nth-child(5)').setAttribute('content', 'Javascript photo gallery');
+  window.location.hash=''
+  document.title='Gallery on JS';
+}
+function english(){
+  text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
+  eng.innerHTML='< - English';
+  styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
+  eng.style.cssText=`border:3px solid grey;width:100%;background:rgba(5,5,5,0.3);border-radius:7px; color:red;text-shadow:black 1px 1px;`
+  Ahref.innerHTML='страница разработана с участием супер шикарной веб мастерской: <a href="https://nasobe.ru/">Веб мастерская имени барона сайтоверсаузена.</a> Обязательно обращайтесь! ^_^';
+  //SEO
+  document.querySelector('head > meta:nth-child(5)').setAttribute('content', 'Фото галерея на яваскрипте');
+  window.location.hash='#eng'
+  document.title='Фото галерея на JS';
+  counTt=0;
+}
+
 document.querySelector('input[type=checkbox]').addEventListener('click',changes);
 function changes(){
   if(document.querySelector('input[type=checkbox]').checked==true){
-    text.innerHTML='Super brilliant photo gallery with flipping by clicking on the photo. Tattoo gallery can be embedded into any site and it will work wherever you can change page styles and embed JS("Java Script" ^_^)';
-    eng.innerHTML='< - Rus';
-    styleCheckbox.innerHTML='Checkbox styles were taken from here <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
-    eng.style.cssText=`border:3px solid green;width:100%;background:rgba(0,255,0,0.3);border-radius:7px;color:grey;text-shadow:black 1px 1px;`
+    russian();
     count=1;
   }else{
-    text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
-    eng.innerHTML='< - Eng';
-    styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
-    eng.style.cssText=`border:3px solid grey;width:100%;background:rgba(5,5,5,0.3);border-radius:7px;`
-    counTt=0;
+    english();
   }
 }
 let eng=document.createElement('span');
 eng.style.cssText=`border:3px solid grey;width:100%;background:rgba(5,5,5,0.3);border-radius:7px;color:red;text-shadow:black 1px 1px;`
-eng.innerHTML='< - Eng';
+eng.innerHTML='< - English';
 document.querySelector('main').append(eng);
 
 let styleCheckbox=document.createElement('p');
@@ -92,19 +109,61 @@ function changesTwo(){
   counTt++;
   if(counTt==1){
     document.querySelector('input[type=checkbox]').checked=true;
-    text.innerHTML='Super brilliant photo gallery with flipping by clicking on the photo. Tattoo gallery can be embedded into any site and it will work wherever you can change page styles and embed JS("Java Script" ^_^)';
-    eng.innerHTML='< - Rus';
-    styleCheckbox.innerHTML='Checkbox styles were taken from here <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
-    eng.style.cssText=`border:3px solid green;width:100%;background:rgba(0,255,0,0.3);border-radius:7px;color:grey;text-shadow:black 1px 1px;`
+    russian();
   }else if(counTt==2){
     document.querySelector('input[type=checkbox]').checked=false;
-    text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
-    eng.innerHTML='< - Eng';
-    styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
-    eng.style.cssText=`border:3px solid grey;width:100%;background:rgba(5,5,5,0.3);border-radius:7px;`
+    english();
     counTt=0;
   }else{
     counTt=0;
   }
 }
+
 document.querySelector('body > main > span:nth-child(6)').addEventListener('click',changesTwo);
+let linkToWebWorkshop=document.createElement('div');
+linkToWebWorkshop.style.cssText=`margin:1%; background:linear-gradient(rgba(0,255,0,0.3),rgba(255,0,0,0.3));`
+document.querySelector('main').append(linkToWebWorkshop);
+let Ahref=document.createElement('a');
+Ahref.innerHTML='страница разработана с участием супер шикарной веб мастерской: <a href="https://nasobe.ru/">Веб мастерская имени барона сайтоверсаузена.</a> Обязательно обращайтесь! ^_^';
+document.querySelector('body > main > div').append(Ahref);
+
+
+function language(){
+  if(window.location.hash=='#eng'){
+    photoClick();
+    changesTwo();
+    // console.log('English');
+  }
+}
+language();
+let photoList=document.createElement('section');
+document.querySelector('main').append(photoList);
+photoList.style.cssText=`
+display:flex;
+max-width:800px;
+width:100%;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+// flex-direction:column;
+`
+console.log(images.length);
+function photoStock(){
+  for(let i=0;i<images.length;i++){
+    let photo=document.createElement('img');
+    photo.setAttribute('id','ph');
+    photo.style.cssText=`
+    width:100%;
+    max-width:300px;
+    margin:3%;
+    `
+    document.querySelector('section').append(photo);
+    // console.log(photo+`${i}`);
+    document.querySelectorAll('#ph')[i].setAttribute('src',`${images[i]}`);
+    document.querySelectorAll('#ph')[i].addEventListener('click',()=>{
+      document.querySelector('img').setAttribute('src',`${images[i]}`);
+      window.location.href='#';
+    });
+  }
+}
+photoStock();
