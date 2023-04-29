@@ -65,7 +65,7 @@ document.querySelector('.lol').addEventListener('click',photoClick);
 function russian(){
   text.innerHTML='Super brilliant photo gallery with flipping by clicking on the photo. Tattoo gallery can be embedded into any site and it will work wherever you can change page styles and embed JS("Java Script" ^_^)';
   eng.innerHTML='< - Russian';
-  styleCheckbox.innerHTML='Checkbox styles were taken from here <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
+  styleCheckbox.innerHTML='Checkbox styles were taken from here: <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
   eng.style.cssText=`border:3px solid green;width:100%;background:rgba(0,255,0,0.3);border-radius:7px;color:grey;text-shadow:black 1px 1px;`
   Ahref.innerHTML='The page was developed with the participation of a super awesome web workshop: <a href="https://nasobe.ru/">Web workshop named after Baron Siteverstauzen.</a> Be sure to check it out! ^_^';
   //SEO
@@ -101,7 +101,7 @@ eng.innerHTML='< - English';
 document.querySelector('main').append(eng);
 
 let styleCheckbox=document.createElement('p');
-styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
+styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда: <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
 styleCheckbox.style.cssText='margin:1%; margin-top:3%;'
 document.querySelector('main').append(styleCheckbox);
 let counTt=+0;
