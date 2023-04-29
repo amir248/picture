@@ -66,14 +66,10 @@ h1{
   transition: all 300ms ease;
 }
 
-
 /*--------------------------------------------------------------
 3.0 Effects Styles
 --------------------------------------------------------------*/
-
-
 /*Style 1*/
-
 .toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
   left: calc(100% - 19px - 3px);
 }

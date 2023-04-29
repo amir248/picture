@@ -61,12 +61,19 @@ document.querySelector('input[type=checkbox]').addEventListener('click',()=>{
   if(document.querySelector('input[type=checkbox]').checked==true){
     text.innerHTML='Super brilliant photo gallery with flipping by clicking on the photo. Tattoo gallery can be embedded into any site and it will work wherever you can change page styles and embed JS("Java Script" ^_^)';
     eng.innerHTML='< - Rus';
+    styleCheckbox.innerHTML='Checkbox styles were taken from here <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
   }else{
     text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
     eng.innerHTML='< - Eng';
+    styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
   }
 });
 
 let eng=document.createElement('span');
 eng.innerHTML='< - Eng';
 document.querySelector('main').append(eng);
+
+let styleCheckbox=document.createElement('p');
+styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
+styleCheckbox.style.cssText='margin:1%; margin-top:3%;'
+document.querySelector('main').append(styleCheckbox);
