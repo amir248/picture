@@ -146,7 +146,6 @@ flex-wrap:wrap;
 justify-content:center;
 align-items:center;
 `
-console.log(images.length);
 function photoStock(){
   for(let i=0;i<images.length;i++){
     let photo=document.createElement('img');
