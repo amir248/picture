@@ -20,7 +20,7 @@ function randomImage(){
 let images=['site/DSC_7533.JPG','site/DSC_7536.JPG','site/DSC_7537.JPG','site/DSC_7538.JPG','site/DSC_7539.JPG','site/DSC_7540.JPG','site/function-return-forever.JPG','site/DSC_7555.JPG'];
 
 let count=+0;
-document.querySelector('img').addEventListener('click',()=>{
+function photoClick(){
   count++;
   if(count<images.length){
     document.querySelector('img').setAttribute('src', `${images[count]}`);
@@ -30,7 +30,9 @@ document.querySelector('img').addEventListener('click',()=>{
   }else{
     count=0;
   }
-});
+
+}
+document.querySelector('img').addEventListener('click',photoClick);
 let span=document.createElement('span');
 span.innerHTML=`click flipping <img src='site/click-flipping.png' alt='галерея на яваскритп с перелистванием по клику' style='width:35px'>`;
 span.className='lol';
@@ -56,6 +58,9 @@ document.querySelector('label').append(div);
 let divTwo=document.createElement('div');
 divTwo.className='toggler-knob';
 document.querySelector('.toggler-slider').append(divTwo);
+
+//фотоКлик созданный после объявления класса лол
+document.querySelector('.lol').addEventListener('click',photoClick);
 
 document.querySelector('input[type=checkbox]').addEventListener('click',changes);
 function changes(){
