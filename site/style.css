@@ -12,7 +12,7 @@ main{
   margin-right: auto;
   width:100%;
   max-width: 900px;
-
+  text-align: center;
 }
 img{
   max-width:900px;
@@ -23,4 +23,9 @@ h1{
   text-shadow: 1px 1px black;
   width:100%;
   background:green;
+}
+.lol{
+  min-height: 35px;
+  color:red;
+  vertical-align: middle;
 }
