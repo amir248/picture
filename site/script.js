@@ -1,3 +1,13 @@
+let title=document.createElement('h1');
+title.innerHTML=`Gallery on the JS`;
+document.querySelector('main').prepend(title);
+
+let picture=document.createElement('picture');
+document.querySelector('main').append(picture);
+let img=document.createElement('img');
+document.querySelector('picture').append(img);
+document.querySelector('img').setAttribute('alt','Галерая на яваскрипт');
+
 window.addEventListener('DOMContentLoaded',()=>{
   document.querySelector('img').setAttribute('src',randomImage());
 });
