@@ -70,10 +70,11 @@ function russian(){
   Ahref.innerHTML='The page was developed with the participation of a super awesome web workshop: <a href="https://nasobe.ru/">Web workshop named after Baron Siteverstauzen.</a> Be sure to check it out! ^_^';
   //SEO
   document.querySelector('head > meta:nth-child(5)').setAttribute('content', 'Javascript photo gallery');
-  window.location.hash=''
   document.title='Gallery on JS';
+  window.location.hash='#eng'
 }
 function english(){
+  window.location.hash=''
   text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
   eng.innerHTML='< - English';
   styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
@@ -81,7 +82,6 @@ function english(){
   Ahref.innerHTML='страница разработана с участием супер шикарной веб мастерской: <a href="https://nasobe.ru/">Веб мастерская имени барона сайтоверсаузена.</a> Обязательно обращайтесь! ^_^';
   //SEO
   document.querySelector('head > meta:nth-child(5)').setAttribute('content', 'Фото галерея на яваскрипте');
-  window.location.hash='#eng'
   document.title='Фото галерея на JS';
   counTt=0;
 }
