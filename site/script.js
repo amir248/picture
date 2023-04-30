@@ -140,7 +140,7 @@ let photoList=document.createElement('section');
 document.querySelector('main').append(photoList);
 photoList.style.cssText=`
 display:flex;
-max-width:800px;
+// max-width:800px;
 width:100%;
 flex-wrap:wrap;
 justify-content:center;
