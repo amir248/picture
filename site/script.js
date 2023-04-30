@@ -63,7 +63,7 @@ document.querySelector('.toggler-slider').append(divTwo);
 document.querySelector('.lol').addEventListener('click',photoClick);
 
 function russian(){
-  text.innerHTML='Super brilliant photo gallery with flipping by clicking on the photo. Tattoo gallery can be embedded into any site and it will work wherever you can change page styles and embed JS("Java Script" ^_^)';
+  text.innerHTML='Super brilliant photo gallery with click-to-swap photo gallery. Such a gallery can be embedded in any site and it will work wherever you can change page styles and embed JS ("Java Script" ^_^)';
   eng.innerHTML='< - Russian';
   styleCheckbox.innerHTML='Checkbox styles were taken from here: <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
   eng.style.cssText=`border:3px solid green;width:100%;background:rgba(0,255,0,0.3);border-radius:7px;color:grey;text-shadow:black 1px 1px;`
@@ -80,7 +80,7 @@ let design=document.createElement('strong');
 design.innerHTML='И еще система комментариев для завершения супер шикарной галереи, но сообщения не записываются на сервер потому что возникает острая необходимость передавать запросы в nodeJS потом передавать, сохранять сообщения и транспортировать их обратно. В теории это возможно сделать, только для этого потребуется дополнительное время + необходимость найти где нибудь дополнительную мотивацию…';
 function english(){
   window.location.hash=''
-  text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
+  text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографию. Такую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
   eng.innerHTML='< - English';
   styleCheckbox.innerHTML='Стили для чекбоква были взфты отсюда <a href="https://alvarotrigo.com/blog/css-checkbox-styles/">styleCheckbox</a>';
   eng.style.cssText=`border:3px solid grey;width:100%;background:rgba(5,5,5,0.3);border-radius:7px; color:red;text-shadow:black 1px 1px;`
