@@ -17,7 +17,7 @@ function randomImage(){
   let random=Math.floor(Math.random()*images.length);
   return images[random];
 }
-let images=['site/DSC_7533.JPG','site/DSC_7536.JPG','site/DSC_7537.JPG','site/DSC_7538.JPG','site/DSC_7539.JPG','site/DSC_7540.JPG','site/function-return-forever.JPG','site/DSC_7555.JPG'];
+let images=['site/DSC_7533.JPG','site/DSC_7536.JPG','site/DSC_7537.JPG','site/DSC_7538.JPG','site/DSC_7539.JPG','site/DSC_7540.JPG','site/function-return-forever.JPG','site/DSC_7555.JPG','site/DSC_4952.JPG'];
 
 let count=+0;
 function photoClick(){
@@ -158,7 +158,7 @@ function photoStock(){
     photo.setAttribute('id','ph');
     photo.style.cssText=`
     width:100%;
-    max-width:35%;
+    max-width:25%;
     margin:3%;
     `
     document.querySelector('section').append(photo);
