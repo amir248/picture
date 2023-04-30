@@ -152,7 +152,7 @@ function photoStock(){
     photo.setAttribute('id','ph');
     photo.style.cssText=`
     width:100%;
-    max-width:300px;
+    max-width:35%;
     margin:3%;
     `
     document.querySelector('section').append(photo);
