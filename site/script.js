@@ -166,9 +166,63 @@ function photoStock(){
   }
 }
 photoStock();
-
+//------------------------------------
+//script messages and comments sustem
+//------------------------------------
 let github=document.createElement('a');
 github.innerHTML='<a href="https://github.com/amir248/picture/blob/main/site/script.js">github</a>';
 github.style.cssText='margin:3%;font-size:50px;text-shadow:1px 1px black;';
 github.setAttribute('id','git');
 document.querySelector('main').append(github);
+//описание мотивации
+let comments=document.createElement('div');
+comments.setAttribute('id','com');
+comments.style.cssText=`
+display:flex;
+flex-direction:column;
+align-items:center;
+width:100%;
+max-width:300px;
+`
+
+document.querySelector('main').append(comments);
+
+const design=document.createElement('strong');
+design.innerHTML='И еще система комментариев для завершения супер шикарной галереи, но сообщения не записываются на сервер потому что возникает острая необходимость передавать запросы в nodeJS потом передавать, сохранять сообщения и транспортировать их обратно. В теории это возможно сделать, только для этого потребуется дополнительное время + необходимость найти где нибудь дополнительную мотивацию…';
+document.querySelector('main').append(design);
+
+let inputyara=document.createElement('input');
+inputyara.setAttribute('type','text');
+inputyara.setAttribute('placeholder','NikName');
+inputyara.setAttribute('id','Name');
+document.querySelector('#com').append(inputyara);
+let inputa=document.createElement('input');
+inputa.setAttribute('type','text');
+inputa.setAttribute('placeholder','Messages');
+inputa.setAttribute('id','Mess');
+document.querySelector('#com').append(inputa);
+let button=document.createElement('button');
+button.innerHTML='Button';
+document.querySelector('#com').append(button);
+class boxobob{
+  constructor(boxo,bob){
+    this.boxo=boxo;
+    this.bob=bob;
+  }
+  lol(){
+    let ok=document.createElement('p');
+    ok.innerHTML=this.boxo+' <span style="color:red">сказал:</span> '+this.bob;
+    document.querySelector('main').append(ok);
+  // let text = `${this.bob}`;
+	//    document.write(
+	//     '<a href="data:text/plain;charset=utf-8,%EF%BB%BF' + encodeURIComponent(text) + '" download="text.json">text.json</a>'
+	// )
+  }
+}
+
+document.querySelector('button').addEventListener('click',()=>{
+  let name =document.querySelector('#Name').value;
+  let messages=document.querySelector('#Mess').value;
+  name = new boxobob(name,messages);
+  name.lol();
+});
