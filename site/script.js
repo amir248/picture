@@ -71,7 +71,10 @@ function russian(){
   //SEO
   document.querySelector('head > meta:nth-child(5)').setAttribute('content', 'Javascript photo gallery');
   document.title='Gallery on JS';
+  
   window.location.hash='#eng'
+
+  design.innerHTML='And a comment system to complete the super chic gallery, but messages are not written to the server because there is an urgent need to pass requests to nodeJS, then pass, save messages and transport them back. In theory, it can be done, only it will require additional time + the need to find additional motivation somewhere ...';
 }
 function english(){
   window.location.hash=''
@@ -84,6 +87,7 @@ function english(){
   document.querySelector('head > meta:nth-child(5)').setAttribute('content', 'Фото галерея на яваскрипте');
   document.title='Фото галерея на JS';
   counTt=0;
+  design.innerHTML='И еще система комментариев для завершения супер шикарной галереи, но сообщения не записываются на сервер потому что возникает острая необходимость передавать запросы в nodeJS потом передавать, сохранять сообщения и транспортировать их обратно. В теории это возможно сделать, только для этого потребуется дополнительное время + необходимость найти где нибудь дополнительную мотивацию…';
 }
 
 document.querySelector('input[type=checkbox]').addEventListener('click',changes);
