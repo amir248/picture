@@ -71,11 +71,13 @@ function russian(){
   //SEO
   document.querySelector('head > meta:nth-child(5)').setAttribute('content', 'Javascript photo gallery');
   document.title='Gallery on JS';
-  
+
   window.location.hash='#eng'
 
   design.innerHTML='And a comment system to complete the super chic gallery, but messages are not written to the server because there is an urgent need to pass requests to nodeJS, then pass, save messages and transport them back. In theory, it can be done, only it will require additional time + the need to find additional motivation somewhere ...';
 }
+let design=document.createElement('strong');
+design.innerHTML='И еще система комментариев для завершения супер шикарной галереи, но сообщения не записываются на сервер потому что возникает острая необходимость передавать запросы в nodeJS потом передавать, сохранять сообщения и транспортировать их обратно. В теории это возможно сделать, только для этого потребуется дополнительное время + необходимость найти где нибудь дополнительную мотивацию…';
 function english(){
   window.location.hash=''
   text.innerHTML='Супер блестящая фото галерея с перелистыванием по клику на фотографю. Татую галерею можно встроить в любой сайт и она будет работать везде где можно менять стили страницы и встраивать JS("Джава Скрипт" ^_^)';
@@ -191,8 +193,7 @@ max-width:300px;
 
 document.querySelector('main').append(comments);
 
-const design=document.createElement('strong');
-design.innerHTML='И еще система комментариев для завершения супер шикарной галереи, но сообщения не записываются на сервер потому что возникает острая необходимость передавать запросы в nodeJS потом передавать, сохранять сообщения и транспортировать их обратно. В теории это возможно сделать, только для этого потребуется дополнительное время + необходимость найти где нибудь дополнительную мотивацию…';
+
 document.querySelector('main').append(design);
 
 let inputyara=document.createElement('input');
